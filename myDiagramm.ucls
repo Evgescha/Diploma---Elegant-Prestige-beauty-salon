@@ -4,7 +4,7 @@
   <class id="1" language="java" name="com.diplom.salonPrestige.SalonPrestigeApplication" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/SalonPrestigeApplication.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="167" x="159" y="53"/>    
+    <position height="99" width="167" x="356" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -15,7 +15,7 @@
     project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/ServiceOrderRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="272" x="989" y="1496"/>    
+    <position height="117" width="272" x="1632" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -25,7 +25,7 @@
   <class id="3" language="java" name="com.diplom.salonPrestige.service.ServiceOrderService" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/ServiceOrderService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="253" x="848" y="781"/>    
+    <position height="81" width="253" x="1632" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -35,7 +35,7 @@
   <interface id="4" language="java" name="com.diplom.salonPrestige.repository.RoleRepository" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/RoleRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="199" x="766" y="1815"/>    
+    <position height="81" width="199" x="871" y="1842"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -46,7 +46,7 @@
     project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/exception/RecordNotFoundException.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="174" x="374" y="53"/>    
+    <position height="81" width="174" x="569" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -56,7 +56,7 @@
   <class id="6" language="java" name="com.diplom.salonPrestige.service.UserServiceImpl" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/UserServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="153" width="212" x="1432" y="781"/>    
+    <position height="153" width="212" x="1102" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   <interface id="7" language="java" name="com.diplom.salonPrestige.repository.StatusRepository" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/StatusRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="162" x="150" y="1496"/>    
+    <position height="81" width="162" x="665" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -76,47 +76,47 @@
   <class id="8" language="java" name="com.diplom.salonPrestige.service.UserDetailsServiceImpl" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/UserDetailsServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="225" x="1754" y="300"/>    
+    <position height="99" width="225" x="1125" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.diplom.salonPrestige.entity.ServiceOrder" project="salonPrestige" 
+  <class id="9" language="java" name="com.diplom.salonPrestige.controller.ClientController" project="salonPrestige" 
+    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/ClientController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="158" x="1606" y="327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.diplom.salonPrestige.entity.ServiceOrder" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/ServiceOrder.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="351" width="160" x="2471" y="781"/>    
+    <position height="351" width="160" x="3264" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="com.diplom.salonPrestige.repository.UserRepository" project="salonPrestige" 
+  <interface id="11" language="java" name="com.diplom.salonPrestige.repository.UserRepository" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/UserRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="223" x="1563" y="1496"/>    
+    <position height="99" width="223" x="1102" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="11" language="java" name="com.diplom.salonPrestige.controller.ClientController" project="salonPrestige" 
-    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/ClientController.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="99" width="158" x="595" y="53"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
   <class id="12" language="java" name="com.diplom.salonPrestige.service.CrudImpl" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/CrudImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="189" width="214" x="594" y="300"/>    
+    <position height="189" width="214" x="871" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -126,7 +126,7 @@
   <class id="13" language="java" name="com.diplom.salonPrestige.service.CategoryService" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/CategoryService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="211" x="1181" y="781"/>    
+    <position height="99" width="211" x="1925" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -136,7 +136,7 @@
   <class id="14" language="java" name="com.diplom.salonPrestige.controller.AdminController" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/AdminController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="158" x="799" y="53"/>    
+    <position height="225" width="176" x="1390" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -145,7 +145,7 @@
   </class>  
   <class id="15" language="java" name="com.diplom.salonPrestige.entity.Status" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/Status.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="163" x="2268" y="781"/>    
+    <position height="243" width="163" x="3061" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -155,7 +155,7 @@
   <class id="16" language="java" name="com.diplom.salonPrestige.service.StatusService" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/StatusService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="185" x="150" y="781"/>    
+    <position height="81" width="185" x="665" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -164,7 +164,7 @@
   </class>  
   <class id="17" language="java" name="com.diplom.salonPrestige.entity.Role" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/Role.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="182" x="2346" y="1496"/>    
+    <position height="279" width="182" x="3139" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -174,7 +174,7 @@
   <class id="18" language="java" name="com.diplom.salonPrestige.config.SwaggerConfig" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/config/SwaggerConfig.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="289" x="1004" y="53"/>    
+    <position height="117" width="289" x="789" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -185,7 +185,7 @@
     project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/RegistratoinController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="282" x="1432" y="300"/>    
+    <position height="117" width="282" x="549" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -195,18 +195,17 @@
   <class id="20" language="java" name="com.diplom.salonPrestige.controller.CategoryController" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/CategoryController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="153" width="186" x="1206" y="300"/>    
+    <position height="153" width="186" x="2586" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="com.diplom.salonPrestige.controller.ServiceOrderController" 
-    project="salonPrestige" 
-    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/ServiceOrderController.java" binary="false" 
+  <class id="21" language="java" name="com.diplom.salonPrestige.controller.WorkerController" project="salonPrestige" 
+    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/WorkerController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="153" width="318" x="848" y="300"/>    
+    <position height="207" width="158" x="1804" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -215,483 +214,553 @@
   </class>  
   <class id="22" language="java" name="com.diplom.salonPrestige.entity.User" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/User.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="675" width="188" x="2040" y="781"/>    
+    <position height="675" width="188" x="2833" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="com.diplom.salonPrestige.controller.IndexController" project="salonPrestige" 
+  <class id="23" language="java" name="com.diplom.salonPrestige.controller.OrderController" project="salonPrestige" 
+    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/OrderController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="186" x="2002" y="327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.diplom.salonPrestige.controller.IndexController" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/IndexController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="158" x="1547" y="53"/>    
+    <position height="99" width="158" x="351" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="com.diplom.salonPrestige.service.OrderService" project="salonPrestige" 
+  <class id="25" language="java" name="com.diplom.salonPrestige.service.OrderService" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/OrderService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="179" x="375" y="781"/>    
+    <position height="81" width="179" x="1413" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="com.diplom.salonPrestige.entity.Category" project="salonPrestige" 
+  <class id="26" language="java" name="com.diplom.salonPrestige.entity.Category" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/Category.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="279" width="209" x="2254" y="300"/>    
+    <position height="279" width="209" x="3047" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="26" language="java" name="com.diplom.salonPrestige.service.CrudService" project="salonPrestige" 
+  <interface id="27" language="java" name="com.diplom.salonPrestige.service.CrudService" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/CrudService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="135" width="151" x="594" y="781"/>    
+    <position height="135" width="151" x="911" y="808"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="27" language="java" name="com.diplom.salonPrestige.entity.Order" project="salonPrestige" 
-    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/Order.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="441" width="174" x="2040" y="300"/>    
+  <class id="28" language="java" name="com.diplom.salonPrestige.controller.ServiceOrderController" 
+    project="salonPrestige" 
+    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/controller/ServiceOrderController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="318" x="2228" y="327"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="com.diplom.salonPrestige.service.RoleServiceImpl" project="salonPrestige" 
+  <class id="29" language="java" name="com.diplom.salonPrestige.entity.Order" project="salonPrestige" 
+    file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/Order.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="174" x="2833" y="327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="com.diplom.salonPrestige.service.RoleServiceImpl" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/service/RoleServiceImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="99" width="183" x="766" y="1496"/>    
+    <position height="99" width="183" x="871" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="com.diplom.salonPrestige.entity.AbstractEntity" project="salonPrestige" 
+  <class id="31" language="java" name="com.diplom.salonPrestige.entity.AbstractEntity" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/entity/AbstractEntity.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="207" width="150" x="2484" y="53"/>    
+    <position height="207" width="150" x="3277" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="30" language="java" name="com.diplom.salonPrestige.repository.CategoryRepository" 
+  <interface id="32" language="java" name="com.diplom.salonPrestige.repository.CategoryRepository" 
     project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/CategoryRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="222" x="1301" y="1496"/>    
+    <position height="81" width="222" x="1944" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="31" language="java" name="com.diplom.salonPrestige.config.SecSecurityConfig" project="salonPrestige" 
+  <class id="33" language="java" name="com.diplom.salonPrestige.config.SecSecurityConfig" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/config/SecSecurityConfig.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="171" width="247" x="1754" y="53"/>    
+    <position height="171" width="247" x="1125" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="32" language="java" name="com.diplom.salonPrestige.repository.OrderRepository" project="salonPrestige" 
+  <interface id="34" language="java" name="com.diplom.salonPrestige.repository.OrderRepository" project="salonPrestige" 
     file="/salonPrestige/src/main/java/com/diplom/salonPrestige/repository/OrderRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="135" width="227" x="375" y="1496"/>    
+    <position height="135" width="227" x="1365" y="1523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <association id="33">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="34" name="myWorks">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="35" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="35">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="36" name="repository"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
   <association id="38">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="39" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="40" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="41">    
-    <bendpoint x="2514" y="300"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <generalization id="42">    
-    <bendpoint x="2493" y="300"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <association id="43">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="44" name="service">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="45" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="46">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="47">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="48" name="userService">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="49" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="50">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="51" name="creator">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="52" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="53">    
-    <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="54" name="users">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="55" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="56">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="57" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="58" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="59">    
-    <bendpoint x="2661" y="781"/>    
-    <bendpoint x="2661" y="300"/>    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <association id="60">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="61" name="roleService">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="62" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="63">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="64">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="65" name="myOrders">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="66" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="67">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="68" name="responses">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="69" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="70">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="71" name="userDetailsService">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="72" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="73">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="74" name="category">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="75" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="76">    
-    <end type="SOURCE" refId="24" navigable="false">      
-      <attribute id="77" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="78" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="79">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="80" name="orders">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="81" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="82">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="26"/>  
-  </realization>  
-  <generalization id="83">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="84">    
-    <end type="SOURCE" refId="25" navigable="false">      
-      <attribute id="85" name="services">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="86" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="87">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="88" name="status">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="89" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="90">    
     <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="91" name="users">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="92" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+      <attribute id="39" name="users"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="93">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="94" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="95" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="96">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="97" name="userService">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="98" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="99">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <generalization id="100">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="101">    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="102" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="103" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="104">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="105" name="worker">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="106" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="107">    
-    <bendpoint x="2009" y="300"/>    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="29"/>  
-  </generalization>  
-  <association id="108">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="109" name="service">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="110" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="111">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="112" name="roles">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="113" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="114">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="115" name="repository">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="116" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="41">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="42" name="repository"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="117">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="118" name="users">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="119" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="44">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="45" name="users"/>      
+      <multiplicity id="46" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="120">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="121" name="myTypes">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="122" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="47">    
+    <bendpoint x="620" y="808"/>    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="48" name="serviceRole"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="51" name="serviceOrder"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="25" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="123">    
-    <bendpoint x="775" y="781"/>    
-    <end type="SOURCE" refId="28"/>    
+  <generalization id="53">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="12"/>  
   </generalization>  
+  <association id="54">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="55" name="serviceCategory"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="58">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="59" name="orders"/>      
+      <multiplicity id="60" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="62" name="repository"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="65" name="repository"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="68" name="service"/>      
+      <multiplicity id="69" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="71" name="status"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="74" name="serviceServiceOrder"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="77" name="userService"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="80" name="creator"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="82">    
+    <bendpoint x="3307" y="327"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <generalization id="84">    
+    <bendpoint x="880" y="808"/>    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="85">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="87">    
+    <bendpoint x="3286" y="327"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <association id="88">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="89" name="serviceUser"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="91">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="92" name="serviceOrder"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="94">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="95" name="service"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="97">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="98" name="serviceOrder"/>      
+      <multiplicity id="99" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="100">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="101" name="roles"/>      
+      <multiplicity id="102" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="104" name="myTypes"/>      
+      <multiplicity id="105" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="106">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="107" name="myOrders"/>      
+      <multiplicity id="108" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="109">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="110" name="serviceServiceOrder"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="113" name="serviceCategory"/>      
+      <multiplicity id="114" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="115">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="116" name="serviceServiceOrder"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="118">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="119" name="serviceOrder"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="121">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="122" name="roleService"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="124">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="125" name="repository"/>      
+      <multiplicity id="126" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="127">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="128" name="serviceServiceOrder"/>      
+      <multiplicity id="129" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="131" name="services"/>      
+      <multiplicity id="132" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="134" name="serviceServiceOrder"/>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="136">    
+    <bendpoint x="3454" y="808"/>    
+    <bendpoint x="3454" y="327"/>    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <association id="137">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="138" name="userService"/>      
+      <multiplicity id="139" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="140">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="141" name="serviceCategory"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="143">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="144" name="repository"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="146">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="147" name="responses"/>      
+      <multiplicity id="148" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <realization id="150">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <association id="151">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="152" name="serviceUser"/>      
+      <multiplicity id="153" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="154">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="155" name="serviceUser"/>      
+      <multiplicity id="156" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="158" name="users"/>      
+      <multiplicity id="159" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="161" name="category"/>      
+      <multiplicity id="162" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="164" name="serviceUser"/>      
+      <multiplicity id="165" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="166">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="167" name="myWorks"/>      
+      <multiplicity id="168" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="170" name="serviceCategory"/>      
+      <multiplicity id="171" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="173" name="worker"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="175">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="176" name="userDetailsService"/>      
+      <multiplicity id="177" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="178">    
+    <bendpoint x="2802" y="327"/>    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <generalization id="179">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="180">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="181" name="serviceCategory"/>      
+      <multiplicity id="182" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

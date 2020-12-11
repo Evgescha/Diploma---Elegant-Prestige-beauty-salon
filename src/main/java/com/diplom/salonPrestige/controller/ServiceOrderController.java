@@ -13,15 +13,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.diplom.salonPrestige.entity.ServiceOrder;
 import com.diplom.salonPrestige.exception.RecordNotFoundException;
+import com.diplom.salonPrestige.service.CategoryService;
 import com.diplom.salonPrestige.service.ServiceOrderService;
 
 @Controller
 @RequestMapping("/service")
-public class ServiceController {
+public class ServiceOrderController {
 
 	@Autowired
-	ServiceOrderService service;
+	ServiceOrderService serviceServiceOrder;;
 
+	@Autowired
+	CategoryService serviceCategory;
 	
 
 	@GetMapping
