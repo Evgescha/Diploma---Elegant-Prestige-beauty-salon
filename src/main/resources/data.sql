@@ -3,11 +3,12 @@ INSERT IGNORE INTO role(id, name) VALUES(2,'ROLE_ADMIN');
 INSERT IGNORE INTO role(id, name) VALUES(3,'ROLE_WORKER');
 INSERT IGNORE INTO role(id, name) VALUES(4,'ROLE_MANAGER');
 
-INSERT IGNORE INTO role(id, name) VALUES(1,'РџСЂРµРґР·Р°РєР°Р·');
-INSERT IGNORE INTO role(id, name) VALUES(2,'РћС‚РєСЂС‹С‚');
-INSERT IGNORE INTO role(id, name) VALUES(3,'РџСЂРµРґРѕРїР»Р°С‚Р°');
-INSERT IGNORE INTO role(id, name) VALUES(4,'Р’ СЂР°Р±РѕС‚Рµ');
-INSERT IGNORE INTO role(id, name) VALUES(5,'Р’ Р°СЂС…РёРІРµ');
+INSERT IGNORE INTO status(id, name) VALUES(1,'Предзаказ');
+INSERT IGNORE INTO status(id, name) VALUES(2,'Открыт');
+INSERT IGNORE INTO status(id, name) VALUES(3,'Предоплата');
+INSERT IGNORE INTO status(id, name) VALUES(4,'В работе');
+INSERT IGNORE INTO status(id, name) VALUES(5,'В архиве');
 
 INSERT IGNORE INTO my_users(id, username, password) VALUES (1,'admin','$2a$10$7kQ1nv74qr7CiGAouEzxUOqoD9Pylh7nKY6WXDzAV6O1IF5R21tz.');
+INSERT IGNORE INTO user_role(user_id, role_id) VALUE (1,2);nKY6WXDzAV6O1IF5R21tz.');
 INSERT IGNORE INTO user_role(user_id, role_id) VALUE (1,2);

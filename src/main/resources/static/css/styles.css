@@ -303,3 +303,6 @@ select{
 table {
 	width: 100%;
 }
+.container .card .container{
+	overflow: scroll;
+}
