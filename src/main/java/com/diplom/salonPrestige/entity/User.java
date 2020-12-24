@@ -31,7 +31,7 @@ public class User extends AbstractEntity {
 	@NotNull
 	private String username;
 
-	@JsonIgnore
+//	@JsonIgnore
 	@NotNull
 	private String password;
 
@@ -99,5 +99,15 @@ public class User extends AbstractEntity {
 	public String toString() {
 		return username;
 	}
+
+	public void update(String username, String password, String fio, String adres, String phone, Date dateBorn) {
+		this.username = username;
+		this.password = password;
+		this.fio = fio;
+		this.adres = adres;
+		this.phone = phone;
+		this.dateBorn = dateBorn;
+	}
+	
 
 }

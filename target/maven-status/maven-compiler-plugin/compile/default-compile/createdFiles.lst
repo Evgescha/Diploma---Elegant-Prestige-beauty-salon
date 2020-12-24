@@ -11,7 +11,9 @@ com\diplom\salonPrestige\entity\AbstractEntity.class
 com\diplom\salonPrestige\service\ServiceOrderService.class
 com\diplom\salonPrestige\repository\CategoryRepository.class
 com\diplom\salonPrestige\service\OrderService.class
+com\diplom\salonPrestige\controller\UserController.class
 com\diplom\salonPrestige\config\SwaggerConfig.class
+com\diplom\salonPrestige\controller\ManagerController.class
 com\diplom\salonPrestige\repository\UserRepository.class
 com\diplom\salonPrestige\controller\CategoryController.class
 com\diplom\salonPrestige\repository\StatusRepository.class
