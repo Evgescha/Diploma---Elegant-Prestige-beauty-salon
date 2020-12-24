@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.diplom.salonPrestige.entity.Order;
 import com.diplom.salonPrestige.entity.Role;
+import com.diplom.salonPrestige.entity.Status;
 import com.diplom.salonPrestige.entity.User;
 import com.diplom.salonPrestige.exception.RecordNotFoundException;
 import com.diplom.salonPrestige.service.OrderService;
@@ -42,6 +43,12 @@ public class OrderController {
 	@Autowired
 	StatusService serviceStatus;
 
+	final String STATUS_PREORDER="Предзаказ";
+	final String STATUS_OPEN="Открыт";
+	final String STATUS_PREPAID="Предоплата";
+	final String STATUS_WORK="В работе";
+	final String STATUS_ARHIVE="В архиве";
+	
 	@GetMapping
 	String get(Model model) {
 		List<Order> list = service.repository.findAll();
@@ -50,6 +57,53 @@ public class OrderController {
 		else
 			model.addAttribute("list", list);
 		return "order-list";
+	}
+	
+	@RequestMapping("/preorder")
+	@GetMapping
+	String getPreorder(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_PREORDER));
+		return "order-list";
+	}
+	
+	@RequestMapping("/open")
+	@GetMapping
+	String getOpen(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_OPEN));
+		return "order-list";
+	}
+	
+	@RequestMapping("/prepaid")
+	@GetMapping
+	String getPrepaid(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_PREPAID));
+		return "order-list";
+	}
+	
+	@RequestMapping("/work")
+	@GetMapping
+	String getWork(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_WORK));
+		return "order-list";
+	}
+	
+	@RequestMapping("/arhive")
+	@GetMapping
+	String getArhive(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_ARHIVE));
+		return "order-list";
+	}
+	
+	
+	public List<Order> getOrdersOnlyWithStatus(String status_){
+		Status status = serviceStatus.repository.findByName(status_);
+		List<Order> list1 = service.repository.findAll();
+		List<Order> list = new ArrayList<Order>();
+		for(Order tmp:list1) {
+			if(tmp.getStatus().getId()==status.getId())
+				list.add(tmp);
+		}
+		return list;
 	}
 
 	@RequestMapping(path = { "/edit", "/edit/{id}" })
