@@ -1,5 +1,6 @@
 package com.diplom.salonPrestige.repository;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -19,4 +20,6 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 	List<Order> findByWorker(User worker);
 
 	List<Order> findByStatus(Status status);
+	
+	Order findByCreatorAndServiceAndDateCreatedAndDateEnded(User creator,ServiceOrder service, Date dateCreated, Date dateEnded);
 }

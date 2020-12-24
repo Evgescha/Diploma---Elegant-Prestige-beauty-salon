@@ -27,9 +27,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_USER')}">
                     <a class="nav-item nav-link" href="/">Главная</a>
-                    <a class="nav-item nav-link" href="/user/createOrded">Создать заявку</a>
-                    <a class="nav-item nav-link" href="/user/myOrder">Мои заявки</a>
-                    <a class="nav-item nav-link" href="/user/myArhive">Архив</a>
+                    <a class="nav-item nav-link" href="/users/createOrder">Создать заявку</a>
+                    <a class="nav-item nav-link" href="/users/myOrder">Мои заявки</a>
+                    <a class="nav-item nav-link" href="/users/myArhive">Архив</a>
                     <a class="nav-item nav-link" href="/logout">Выйти</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_ADMIN')}">

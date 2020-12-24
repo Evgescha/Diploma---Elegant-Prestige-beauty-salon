@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <title>Добавить/Редактировать</title>
+    <div th:replace="~{commons :: head}"></div>
+</head>
+ 
+<body>
+
+	<div th:replace="~{commons :: nav}"></div>
+
+<section class="editCategory">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-12 col-lg-8 mx-auto">
+			 <h2 class="text-center">Заказ</h2>
+             <form th:action="@{/users/createOrderNow}" method="post" class="register">
+                <table>
+                    <tbody>
+                                               
+                        <tr>
+                            <th><label class="mx-2">Услуга</label></th>
+                            <td>
+                            	<select name="serviceId" id="serviceId" required>
+                            		<option  name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
+										
+										></option>									
+								</select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Дата создания</label></th>
+                            <td><input type="date" name="dateCreated" class="form-control" required/>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Дата выполнения</label></th>
+                            <td><input type="date" name="dateEnded" class="form-control" required/>
+                            </td>
+                        </tr>
+                        
+                      
+                    </tbody>
+                </table>
+                <p class="my-5 justify-content-between d-flex">
+                	<input type="button" class="btn btn-primary" value = " Назад " onclick="history.back()"/> 
+                	<input type="submit" class="btn btn-primary" value=" Отправить ">
+            	</p>
+            </form>
+        </div>
+        </div>
+    </div>    
+</section>    
+    
+</body>
+ 
+</html>
