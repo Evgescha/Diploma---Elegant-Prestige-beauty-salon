@@ -32,12 +32,6 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-        .withUser("user").password(passwordEncoder().encode("user")).roles("USER")
-        .and()
-        .withUser("worker").password(passwordEncoder().encode("worker")).roles("WORKER")
-        .and()
-        .withUser("admin").password(passwordEncoder().encode("admin")).roles("ADMIN");
         auth.userDetailsService(userDetailsService);
     }
 
@@ -57,7 +51,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/user/**").hasRole("USER")
         .antMatchers("/worker/**").hasRole("WORKER")
         .antMatchers( "/registration","/login","/j _spring_security_check").anonymous()
-        .antMatchers("/", "/css/**","/js/**","/img/**","/j _spring_security_check").permitAll()
+        .antMatchers("/", "/css/**","/js/**","/img/**","/j _spring_security_check","/contact").permitAll()
         .anyRequest().authenticated().and()
         .formLogin().loginPage("/login")
 	        .loginProcessingUrl("/login1")

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,10 @@ public class WorkerController {
 	CategoryService serviceCategory;
 	@Autowired
 	ServiceOrderService serviceServiceOrder;
+	
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	final String ROLE = "ROLE_WORKER";
 
@@ -88,6 +93,7 @@ public class WorkerController {
 		else {
 			User read = service.read(entity.getId());
 			read.update(entity.getUsername(), entity.getPassword(), entity.getFio(), entity.getAdres(), entity.getPhone(), entity.getDateBorn());
+			read.setPassword(passwordEncoder.encode(read.getPassword()));
 			service.update(read);
 		}
 		return "redirect:/workers";

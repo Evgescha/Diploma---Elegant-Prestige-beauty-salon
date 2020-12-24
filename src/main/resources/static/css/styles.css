@@ -306,3 +306,6 @@ table {
 .container .card .container{
 	overflow: scroll;
 }
+.card-feature-view._view_normal._size_small._wide {
+    margin-top: 11px;
+}

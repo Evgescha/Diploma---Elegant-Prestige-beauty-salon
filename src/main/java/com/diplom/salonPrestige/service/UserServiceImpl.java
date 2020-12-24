@@ -33,21 +33,16 @@ public class UserServiceImpl extends CrudImpl<User> {
 	public User findByUsername(String username) {
 		return repository.findByUsernameIgnoreCase(username);
 	}
-	
 
-	@Override
-	public void update(User entity) throws Exception {
-		entity.setPassword(passwordEncoder.encode(entity.getPassword()));
-		super.update(entity);
-	}
-
-	//registration
+//registration
 	public boolean userRegistration(User entity) {
 
 		if (repository.findByUsernameIgnoreCase(entity.getUsername()) != null)
 			return false;
 		entity.setPassword(passwordEncoder.encode(entity.getPassword()));
 		try {
+			if (roleService.findByName(DEFAULT_ROLE) == null)
+				roleService.create(new Role(DEFAULT_ROLE));
 			// просто создание
 			create(entity);
 
@@ -68,6 +63,7 @@ public class UserServiceImpl extends CrudImpl<User> {
 		}
 	}
 	
+
 	public boolean userCreateWorker(User entity) {
 
 		if (repository.findByUsernameIgnoreCase(entity.getUsername()) != null)

@@ -74,20 +74,21 @@
                 	<a class="nav-item nav-link" href="/">Главная</a>
                 	<a class="nav-item nav-link" href="/worker/tender">Тендер</a>
                 	<a class="nav-item nav-link" href="/worker/preorder">На предоплате</a>
-                	<a class="nav-item nav-link" href="/worker/inwork">В работе</a>
+                	<a class="nav-item nav-link" href="/worker/work">В работе</a>
                 	<a class="nav-item nav-link" href="/worker/arhive">Архив</a>
                 	<a class="nav-item nav-link" href="/worker/profile">Профиль</a>
                 	<a class="nav-item nav-link" href="/logout">Выход</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_MANAGER')}">
                 	<a class="nav-item nav-link" href="/">Главная</a>
-                    <a class="nav-item nav-link" href="/">Не обработанные</a>
-                    <a class="nav-item nav-link" href="/">На тендере</a>
-                    <a class="nav-item nav-link" href="/">Отклики рабочих</a>
-                    <a class="nav-item nav-link" href="/">На предоплате</a>
+                    <a class="nav-item nav-link" href="/order/preorder">Не обработанные</a>
+                    <a class="nav-item nav-link" href="/order/open">На тендере</a>
+                    <a class="nav-item nav-link" href="/order/responses">Отклики рабочих</a>
+                    <a class="nav-item nav-link" href="/order/prepaid">На предоплате</a>
                     <a class="nav-item nav-link" href="/logout">Выйти</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal == null}">
+                	<a class="nav-item nav-link" href="/">Главная</a>
                     <a class="nav-item nav-link" href="/login">Вход</a>
                     <a class="nav-item nav-link" href="/registration">Регистрация</a>
                     <a class="nav-item nav-link" href="/contact">Контакты</a>
