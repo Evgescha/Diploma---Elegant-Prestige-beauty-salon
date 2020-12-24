@@ -60,7 +60,7 @@ public class ServiceOrderController {
 
 	@RequestMapping(path = "/delete/{id}")
 	public String delete(Model model, @PathVariable("id") Long id) throws Exception {
-		service.delete(id);
+//		service.delete(id);
 		return "redirect:/webinaries";
 	}
 

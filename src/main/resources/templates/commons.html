@@ -27,14 +27,59 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_USER')}">
                     <a class="nav-item nav-link" href="/">Главная</a>
-                    <a class="nav-item nav-link" href="/webinaries">Вебинары</a>
-                    <a class="nav-item nav-link" href="/webinaries/toGO">Выбранные для посещения</a>
-                    <a class="nav-item nav-link" href="/webinaries/history">Моя история</a>
-                    <a class="nav-item nav-link" href="/webinaries/createMy">Создать свой</a>
-                    <a class="nav-item nav-link" href="/profile">Профиль</a>
+                    <a class="nav-item nav-link" href="/user/createOrded">Создать заявку</a>
+                    <a class="nav-item nav-link" href="/user/myOrder">Мои заявки</a>
+                    <a class="nav-item nav-link" href="/user/myArhive">Архив</a>
                     <a class="nav-item nav-link" href="/logout">Выйти</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_ADMIN')}">
+                	<a class="nav-item nav-link" href="/">Главная</a>
+                	  <div class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Заявки
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="/admin/">Не обработанные</a>
+				          <a class="dropdown-item" href="/admin/">На тендере</a>
+				          <a class="dropdown-item" href="/admin/">Отклики рабочих</a>
+				          <a class="dropdown-item" href="/admin/">На предоплате</a>
+				          <a class="dropdown-item" href="/admin/">В работе</a>
+				          <a class="dropdown-item" href="/admin/">Архив</a>
+				        </div>
+				      </div>
+				      
+                	  <div class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Люди
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="/admin/">Клиенты</a>
+				          <a class="dropdown-item" href="/admin/">Рабочие</a>
+				          <a class="dropdown-item" href="/admin/">Менеджеры</a>
+				        </div>
+				      </div>
+				      
+					<div class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Услуги
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" href="/admin/">Типы услуг</a>
+				          <a class="dropdown-item" href="/admin/">Перечень услуг</a>
+				        </div>
+				      </div>
+                    <a class="nav-item nav-link" href="/logout">Выйти</a>
+                </div>
+                <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_WORKER')}">
+                	<a class="nav-item nav-link" href="/">Главная</a>
+                	<a class="nav-item nav-link" href="/worker/tender">Тендер</a>
+                	<a class="nav-item nav-link" href="/worker/preorder">На предоплате</a>
+                	<a class="nav-item nav-link" href="/worker/inwork">В работе</a>
+                	<a class="nav-item nav-link" href="/worker/arhive">Архив</a>
+                	<a class="nav-item nav-link" href="/worker/profile">Профиль</a>
+                	<a class="nav-item nav-link" href="/logout">Выход</a>
+                </div>
+                <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_MANAGER')}">
                 	<a class="nav-item nav-link" href="/">Главная</a>
                     <a class="nav-item nav-link" href="/usersList">Пользователи</a>
                     <a class="nav-item nav-link" href="/usersCreatingList">Запросы на создание</a>
@@ -46,8 +91,9 @@
                     <a class="nav-item nav-link" href="/logout">Выйти</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal == null}">
-                    <a class="nav-item nav-link" href="/login">Войти</a>
+                    <a class="nav-item nav-link" href="/login">Вход</a>
                     <a class="nav-item nav-link" href="/registration">Регистрация</a>
+                    <a class="nav-item nav-link" href="/contact">Контакты</a>
                 </div>
             </div>
         </nav>

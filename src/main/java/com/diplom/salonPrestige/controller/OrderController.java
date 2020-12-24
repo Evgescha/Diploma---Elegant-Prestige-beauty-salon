@@ -15,7 +15,7 @@ import com.diplom.salonPrestige.service.OrderService;
 import com.diplom.salonPrestige.service.ServiceOrderService;
 
 @Controller
-@RequestMapping("/categories")
+@RequestMapping("/order")
 public class OrderController {
 
 	@Autowired

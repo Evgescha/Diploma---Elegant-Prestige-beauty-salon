@@ -1,3 +1,5 @@
+com\diplom\salonPrestige\controller\WorkerController.class
+com\diplom\salonPrestige\controller\ServiceOrderController.class
 com\diplom\salonPrestige\service\CrudImpl.class
 com\diplom\salonPrestige\entity\Role.class
 com\diplom\salonPrestige\entity\ServiceOrder.class
@@ -15,8 +17,9 @@ com\diplom\salonPrestige\controller\CategoryController.class
 com\diplom\salonPrestige\repository\StatusRepository.class
 com\diplom\salonPrestige\config\SecSecurityConfig.class
 com\diplom\salonPrestige\service\CrudService.class
-com\diplom\salonPrestige\controller\ServiceController.class
+com\diplom\salonPrestige\controller\OrderController.class
 com\diplom\salonPrestige\service\StatusService.class
+com\diplom\salonPrestige\controller\ClientController.class
 com\diplom\salonPrestige\service\CategoryService.class
 com\diplom\salonPrestige\controller\RegistratoinController.class
 com\diplom\salonPrestige\service\UserDetailsServiceImpl.class
@@ -27,4 +30,5 @@ com\diplom\salonPrestige\controller\IndexController.class
 com\diplom\salonPrestige\entity\Status.class
 com\diplom\salonPrestige\entity\User.class
 com\diplom\salonPrestige\repository\OrderRepository.class
+com\diplom\salonPrestige\controller\AdminController.class
 com\diplom\salonPrestige\entity\Category.class
