@@ -54,8 +54,8 @@
 				        </a>
 				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 				          <a class="dropdown-item" href="/users">Клиенты</a>
-				          <a class="dropdown-item" href="/admin">Рабочие</a>
-				          <a class="dropdown-item" href="/admin">Менеджеры</a>
+				          <a class="dropdown-item" href="/workers">Рабочие</a>
+				          <a class="dropdown-item" href="/managers">Менеджеры</a>
 				        </div>
 				      </div>
 				      
@@ -81,13 +81,10 @@
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_MANAGER')}">
                 	<a class="nav-item nav-link" href="/">Главная</a>
-                    <a class="nav-item nav-link" href="/usersList">Пользователи</a>
-                    <a class="nav-item nav-link" href="/usersCreatingList">Запросы на создание</a>
-                    <a class="nav-item nav-link" href="/categories">Категории</a>
-                    <a class="nav-item nav-link" href="/platforms">Платформы</a>
-                    <a class="nav-item nav-link" href="/webinaries">Вебинары</a>
-                    <a class="nav-item nav-link" href="/arhive">Архив</a>
-                    <a class="nav-item nav-link" href="/statistic">Статистика</a>
+                    <a class="nav-item nav-link" href="/">Не обработанные</a>
+                    <a class="nav-item nav-link" href="/">На тендере</a>
+                    <a class="nav-item nav-link" href="/">Отклики рабочих</a>
+                    <a class="nav-item nav-link" href="/">На предоплате</a>
                     <a class="nav-item nav-link" href="/logout">Выйти</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal == null}">
