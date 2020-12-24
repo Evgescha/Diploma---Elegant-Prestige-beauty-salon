@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 import lombok.Data;
 @Entity
-@Table(name = "myUsers")
+@Table(name = "myOrders")
 @Data
 public class Order extends AbstractEntity {
 	@ManyToOne

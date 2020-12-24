@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+    <title>Добавить/Редактировать</title>
+    <div th:replace="~{commons :: head}"></div>
+</head>
+ 
+<body>
+
+	<div th:replace="~{commons :: nav}"></div>
+
+<section class="editCategory">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-12 col-lg-8 mx-auto">
+			 <h2 class="text-center">Заказ</h2>
+             <form th:action="@{/order/create}" th:object="${entity}" method="post" class="register">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label class="mx-2">Создатель</label></th>
+                            <td>
+                            	<select name="userId" id="userId" required>
+                            		<option th:if="${entity.creator==null}" name="userId" th:each="cat : ${users}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.creator==cat}"
+										></option>
+									<option th:if="${entity.creator!=null}" name="userId" th:each="cat : ${users}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.creator.id==cat.id}"
+										></option>
+								</select>
+							</td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Услуга</label></th>
+                            <td>
+                            	<select name="serviceId" id="serviceId" required>
+                            		<option th:if="${entity.service==null}" name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.service==cat}"
+										></option>
+									<option th:if="${entity.service!=null}" name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.service.id==cat.id}"
+										></option>
+								</select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Дата создания</label></th>
+                            <td><input type="date" th:field="*{dateCreated}" class="form-control" required/>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Дата выполнения</label></th>
+                            <td><input type="date" th:field="*{dateEnded}" class="form-control" required/>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Рабочий</label></th>
+                            <td>
+                            	<select name="workerId" id="workerId" required>
+                            		<option th:if="${entity.worker==null}" name="userId" th:each="cat : ${workers}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.worker==cat}"
+										></option>
+									<option th:if="${entity.worker!=null}" name="userId" th:each="cat : ${workers}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.worker.id==cat.id}"
+										></option>
+								</select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <th><label class="mx-2">Статус</label></th>
+                            <td>
+                            	<select name="statusId" id="userId" required>
+                            		<option th:if="${entity.status==null}" name="status" th:each="cat : ${statuses}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.status==cat}"
+										></option>
+									<option th:if="${entity.status!=null}" name="status" th:each="cat : ${statuses}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${entity.status.id==cat.id}"
+										></option>
+								</select>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <p class="my-5 justify-content-between d-flex">
+                	<input type="hidden" id="id" th:field="*{id}">
+                	<input type="button" class="btn btn-primary" value = " Назад " onclick="history.back()"/> 
+                	<input type="submit" class="btn btn-primary" value=" Отправить ">
+            	</p>
+            </form>
+        </div>
+        </div>
+    </div>    
+</section>    
+    
+</body>
+ 
+</html>

@@ -22,6 +22,11 @@ public class ServiceOrder extends AbstractEntity {
 	@JoinColumn(name = "category_id")
 	Category category;
 
+	@Override
+	public String toString() {
+		return name + ", " + price + ", " + category;
+	}
+
 	
 
 }
