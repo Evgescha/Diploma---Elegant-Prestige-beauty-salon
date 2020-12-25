@@ -29,26 +29,25 @@ public class OrderController {
 
 	@Autowired
 	OrderService service;
-	
-	
+
 	@Autowired
-	ServiceOrderService serviceServiceOrder	;
-	
+	ServiceOrderService serviceServiceOrder;
+
 	@Autowired
 	UserServiceImpl serviceUser;
-	
+
 	@Autowired
 	RoleServiceImpl serviceRole;
-	
+
 	@Autowired
 	StatusService serviceStatus;
 
-	final String STATUS_PREORDER="Предзаказ";
-	final String STATUS_OPEN="Открыт";
-	final String STATUS_PREPAID="Предоплата";
-	final String STATUS_WORK="В работе";
-	final String STATUS_ARHIVE="В архиве";
-	
+	final String STATUS_PREORDER = "Предзаказ";
+	final String STATUS_OPEN = "Открыт";
+	final String STATUS_PREPAID = "Предоплата";
+	final String STATUS_WORK = "В работе";
+	final String STATUS_ARHIVE = "В архиве";
+
 	@GetMapping
 	String get(Model model) {
 		List<Order> list = service.repository.findAll();
@@ -58,30 +57,32 @@ public class OrderController {
 			model.addAttribute("list", list);
 		return "order-list";
 	}
-	
+
 	@RequestMapping("/preorder")
 	@GetMapping
 	String getPreorder(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_PREORDER));
 		return "order-list";
 	}
-	
+
 	@RequestMapping("/open")
 	@GetMapping
 	String getOpen(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_OPEN));
 		return "order-list";
 	}
+
 	@RequestMapping("/responses")
 	@GetMapping
 	String geresponses(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_OPEN));
 		return "responses-order-list";
 	}
+
 	@RequestMapping("/madeorder/{idOrder}/{idWorker}")
 	@GetMapping
-	String madeOrder(Model model,@PathVariable("idOrder") Long idOrder,@PathVariable("idWorker") Long idWorker) {
-		
+	String madeOrder(Model model, @PathVariable("idOrder") Long idOrder, @PathVariable("idWorker") Long idWorker) {
+
 		Order order = service.read(idOrder);
 		order.setWorker(serviceUser.read(idWorker));
 		order.setStatus(serviceStatus.repository.findByName(STATUS_PREPAID));
@@ -93,35 +94,34 @@ public class OrderController {
 		}
 		return "redirect:/order/responses";
 	}
-	
+
 	@RequestMapping("/prepaid")
 	@GetMapping
 	String getPrepaid(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_PREPAID));
 		return "order-list";
 	}
-	
+
 	@RequestMapping("/work")
 	@GetMapping
 	String getWork(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_WORK));
 		return "order-list";
 	}
-	
+
 	@RequestMapping("/arhive")
 	@GetMapping
 	String getArhive(Model model) {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_ARHIVE));
 		return "order-list";
 	}
-	
-	
-	public List<Order> getOrdersOnlyWithStatus(String status_){
+
+	public List<Order> getOrdersOnlyWithStatus(String status_) {
 		Status status = serviceStatus.repository.findByName(status_);
 		List<Order> list1 = service.repository.findAll();
 		List<Order> list = new ArrayList<Order>();
-		for(Order tmp:list1) {
-			if(tmp.getStatus().getId()==status.getId())
+		for (Order tmp : list1) {
+			if (tmp.getStatus().getId() == status.getId())
 				list.add(tmp);
 		}
 		return list;
@@ -136,14 +136,15 @@ public class OrderController {
 		} else {
 			model.addAttribute("entity", new Order());
 		}
-		
+
 		model.addAttribute("users", getOnluUser());
 		model.addAttribute("workers", getOnluWorker());
 		model.addAttribute("statuses", serviceStatus.repository.findAll());
-		model.addAttribute("services",serviceServiceOrder.repository.findAll() );
-		
+		model.addAttribute("services", serviceServiceOrder.repository.findAll());
+
 		return "order-add-edit";
 	}
+
 	private List<User> getOnluUser() {
 		List<User> list1 = serviceUser.repository.findAll();
 		List<User> list = new ArrayList<User>();
@@ -154,7 +155,7 @@ public class OrderController {
 		}
 		return list;
 	}
-	
+
 	private List<User> getOnluWorker() {
 		List<User> list1 = serviceUser.repository.findAll();
 		List<User> list = new ArrayList<User>();
@@ -168,18 +169,46 @@ public class OrderController {
 
 	@RequestMapping(path = "/delete/{id}")
 	public String delete(Model model, @PathVariable("id") Long id) throws Exception {
+		Order read;
+		read = service.read(id);
+		for (int i = 0; i < read.getUsers().size(); i++) {
+			for(Order order:read.getUsers().get(i).getResponses()) {
+				if(order.getId()==read.getId()) {
+					read.getUsers().get(i).getResponses().remove(order);
+					serviceUser.update(read.getUsers().get(i));
+				}
+			}			
+		}
+		for (Order order:read.getCreator().getMyWorks()) {
+			if(order.getId()==read.getId()) {
+				read.getCreator().getMyWorks().remove(order);
+				serviceUser.update(read.getCreator());
+			}
+		}
+//		read.getUsers().clear();
+//		service.update(read);
+//		if (read.getWorker() != null)
+//			read.getWorker().getMyWorks().remove(read);
+//		read.setWorker(null);
+//		service.update(read);
+//		serviceUser.update(read.getWorker());
+
+//		read = service.read(id);
+//		if (read.getCreator() != null)
+//			read.getCreator().getMyOrders().remove(read);
+//		read.setCreator(null);
+//		service.update(read);
+//		serviceUser.update(read.getCreator());
+
 		service.delete(id);
 		return "redirect:/order";
 	}
 
 	@RequestMapping(path = "/create", method = RequestMethod.POST)
-	public String createOrUpdate(Order entity,
-			@RequestParam("userId") Long userId,
-			@RequestParam("serviceId") Long serviceId,
-			@RequestParam("workerId") Long workerId,
-			@RequestParam("statusId") Long statusId
-			) throws Exception {
-		
+	public String createOrUpdate(Order entity, @RequestParam("userId") Long userId,
+			@RequestParam("serviceId") Long serviceId, @RequestParam("workerId") Long workerId,
+			@RequestParam("statusId") Long statusId) throws Exception {
+
 		entity.setCreator(serviceUser.read(userId));
 		entity.setService(serviceServiceOrder.read(serviceId));
 		entity.setWorker(serviceUser.read(workerId));
