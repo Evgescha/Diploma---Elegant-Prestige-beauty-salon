@@ -96,7 +96,7 @@ public class UserController {
 	}
 
 	@RequestMapping(path = "/createOrderNow", method = RequestMethod.POST)
-	public String createOrder(Order entity, @RequestParam("id") Long id, @RequestParam("serviceId") Long serviceId, Principal principal)
+	public String createOrder(Order entity, @RequestParam(name = "id", required = false) Long id, @RequestParam("serviceId") Long serviceId, Principal principal)
 			throws Exception {
 
 		User creator = service.findByUsername(principal.getName());
