@@ -9,27 +9,50 @@
     <div th:replace="~{commons :: nav}"></div>
     
    
-<section class="category-list"> 
+<section class="orderToUzer"> 
     <h2 th:if="${myArhive}" class="text-center">Архив заявок</h2>
     <h2 th:if="${myOrder}" class="text-center">Мои заявки</h2>
     
     <div class="container my-2 " th:each="entity : ${list}">
         <div class="card">
-            <div class="row">
+            <div class="">
                 <div class="card-body">
                     <div class="container">                        
-	                     <div class="item">
-	                         <div class="item-title" th:text="'Номер заказа: '+${entity.id}">number order</div>
-	                         <div class="item-whoAndWhen">
-	                             <div class="item-" th:text="${entity.service.name}">Title</div>
-	                             <div class="item-" th:text="'Создано: '+${entity.dateCreated}">date created</div>
-	                             <div class="item-" th:text="'Выолнить: '+${entity.dateEnded}">dateEnded</div>
-	                         </div>
-	                         <div class="item-status" th:text="'Статус: '+${entity.status}">status</div>
-	                         <div class="item-butons" th:if="${myOrder}">
-								<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/createOrder/'+${entity.id}" >Изменить</a>
-								<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/orderDelete/'+${entity.id}">Удалить</a> 
-	                         </div>
+	                     <div class="item row">
+		                     <div class="text-info col-md-7">
+		                        <div class="info-first">
+		                         	<div class="item-title" th:text="'Номер заказа: '+${entity.id}">number order</div>
+	                     		</div>
+		                     	<div class="info-second">
+	                            	<div class="item-" th:text="${entity.service.name}">Title</div>
+		                     		<div class="item-" th:text="${entity.service.category}">category</div>
+		                     		<div class="item-status" th:text="'Статус: '+${entity.status}">status</div>
+	                     		</div>
+		                     </div>
+		                     
+		                     
+		                     <div class="info-third col-md-5">
+		                     	<div class="prizeAndData">
+		                     		<div class="item-prize" th:text="'Стоимость: '+${entity.service.price}">prize</div>
+		                     		<div class="item-created" th:text="'Создано: '+${entity.dateCreated}">date created</div>
+	                             	<div class="item-ended" th:text="'Выолнить: '+${entity.dateEnded}">dateEnded</div>
+		                     	</div>
+		                     	<div class="btns">
+<!-- 		                     		for user -->
+		                     		<div class="item-butons justify-content-between d-flex" th:if="${myOrder}">
+										<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/createOrder/'+${entity.id}" >Изменить</a>
+										<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/orderDelete/'+${entity.id}">Удалить</a> 
+		                        	</div>	
+<!-- 		                        	for worker -->
+		                     		<div class="item-butons justify-content-between d-flex work" th:if="${work}">
+										<a th:if="${entity.status.id==2}" class="btn btn-primary" th:href="'/workers/response/'+${entity.id}" >Отозваться</a>
+										<p th:if="${entity.status.id==3}">Заказ на предоплате</p>
+										<p th:if="${entity.status.id==4}">Заказ в работе</p>
+										<p th:if="${entity.status.id==5}">Заказ в архиве</p>
+		                        	</div>	
+		                     	</div>
+		                     	
+		                     </div>
 	                     </div>                               
 	                 </div>
                 </div>

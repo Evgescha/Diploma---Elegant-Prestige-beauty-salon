@@ -72,6 +72,27 @@ public class OrderController {
 		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_OPEN));
 		return "order-list";
 	}
+	@RequestMapping("/responses")
+	@GetMapping
+	String geresponses(Model model) {
+		model.addAttribute("list", getOrdersOnlyWithStatus(STATUS_OPEN));
+		return "responses-order-list";
+	}
+	@RequestMapping("/madeorder/{idOrder}/{idWorker}")
+	@GetMapping
+	String madeOrder(Model model,@PathVariable("idOrder") Long idOrder,@PathVariable("idWorker") Long idWorker) {
+		
+		Order order = service.read(idOrder);
+		order.setWorker(serviceUser.read(idWorker));
+		order.setStatus(serviceStatus.repository.findByName(STATUS_PREPAID));
+		try {
+			service.update(order);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "redirect:/order/responses";
+	}
 	
 	@RequestMapping("/prepaid")
 	@GetMapping

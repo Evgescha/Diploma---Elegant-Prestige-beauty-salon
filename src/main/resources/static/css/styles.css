@@ -309,3 +309,24 @@ table {
 .card-feature-view._view_normal._size_small._wide {
     margin-top: 11px;
 }
+
+
+.orderToUzer .item, .orderToUzer .info-third {
+	
+	border: 1px solid black;
+}
+.orderToUzer .item.row{
+	font-size: 20px;
+}
+.orderToUzer .item-title{
+	font-size: 24px;
+}
+.orderToUzer .item.row .info-third div{
+	padding: 2px;
+}
+.orderToUzer .container .card .container {
+    overflow: auto;
+}
+.orderToUzer .item-butons.work a{
+	width: 100%;
+}

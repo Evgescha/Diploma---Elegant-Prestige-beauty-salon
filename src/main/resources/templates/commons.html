@@ -72,11 +72,10 @@
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_WORKER')}">
                 	<a class="nav-item nav-link" href="/">Главная</a>
-                	<a class="nav-item nav-link" href="/worker/tender">Тендер</a>
-                	<a class="nav-item nav-link" href="/worker/preorder">На предоплате</a>
-                	<a class="nav-item nav-link" href="/worker/work">В работе</a>
-                	<a class="nav-item nav-link" href="/worker/arhive">Архив</a>
-                	<a class="nav-item nav-link" href="/worker/profile">Профиль</a>
+                	<a class="nav-item nav-link" href="/workers/tender">Тендер</a>
+                	<a class="nav-item nav-link" href="/workers/prepaid">На предоплате</a>
+                	<a class="nav-item nav-link" href="/workers/work">В работе</a>
+                	<a class="nav-item nav-link" href="/workers/arhive">Архив</a>
                 	<a class="nav-item nav-link" href="/logout">Выход</a>
                 </div>
                 <div class="navbar-nav" th:if="${#request.userPrincipal != null && #request.isUserInRole('ROLE_MANAGER')}">
