@@ -10,9 +10,8 @@
     
    
 <section class="category-list"> 
-<!--     <h2 th:if="${!isContains and isEnded==null}" class="text-center">Вебинары, доступные для посещения</h2> -->
-<!--     <h2 th:if="${isContains and isEnded==null}" class="text-center">Выбранные для посещения вебинары</h2> -->
-<!--     <h2 th:if="${isEnded}" class="text-center">Вебинары, которые уже закончились</h2> -->
+    <h2 th:if="${myArhive}" class="text-center">Архив заявок</h2>
+    <h2 th:if="${myOrder}" class="text-center">Мои заявки</h2>
     
     <div class="container my-2 " th:each="entity : ${list}">
         <div class="card">
@@ -27,10 +26,9 @@
 	                             <div class="item-" th:text="'Выолнить: '+${entity.dateEnded}">dateEnded</div>
 	                         </div>
 	                         <div class="item-status" th:text="'Статус: '+${entity.status}">status</div>
-	                         <div class="item-butons">
-<!-- 	                             <a th:if="${isContains and isEnded==null}" class="btn btn-primary" th:href="'/webinariesToUser/delete/'+${entity.id}">Не участвую</a>  -->
-<!-- 	         					<a th:if="${!isContains  and isEnded==null}" class="btn btn-primary" th:href="'/webinariesToUser/igo/'+${entity.id}" >Участвую</a> -->
-<!-- 	                             <a href="#" th:href="'/webinariesToUser/info/'+${entity.id}" class="getInfo btn btn-primary">Подробнее</a> -->
+	                         <div class="item-butons" th:if="${myOrder}">
+								<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/createOrder/'+${entity.id}" >Изменить</a>
+								<a th:if="${entity.status.id<4}" class="btn btn-primary" th:href="'/users/orderDelete/'+${entity.id}">Удалить</a> 
 	                         </div>
 	                     </div>                               
 	                 </div>

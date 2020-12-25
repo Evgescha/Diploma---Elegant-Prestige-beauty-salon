@@ -70,9 +70,23 @@ public class UserController {
 		service.delete(id);
 		return "redirect:/users/";
 	}
+	
+	@RequestMapping(path = "/orderDelete/{id}")
+	public String deleteOrder(Model model, @PathVariable("id") Long id) throws Exception {
+		serviceOrder.delete(id);
+		return "redirect:/users/myOrder";
+	}
 
-	@RequestMapping(path = "/createOrder")
-	public String createOrder(Model model, Principal princopal) throws Exception {
+	@RequestMapping(path = { "/createOrder", "/createOrder/{id}" })
+	public String createOrder(Model model, Principal princopal, @PathVariable(name = "id", required = false) Long id)
+			throws Exception {
+
+		if (id != null) {
+			Order order = serviceOrder.read(id);
+			model.addAttribute("order", order);
+		} else {
+			model.addAttribute("order", new Order());
+		}
 
 		User entity = service.findByUsername(princopal.getName());
 		model.addAttribute("entity", entity);
@@ -82,21 +96,29 @@ public class UserController {
 	}
 
 	@RequestMapping(path = "/createOrderNow", method = RequestMethod.POST)
-	public String createOrder(Order entity, @RequestParam("serviceId") Long serviceId, Principal principal)
+	public String createOrder(Order entity, @RequestParam("id") Long id, @RequestParam("serviceId") Long serviceId, Principal principal)
 			throws Exception {
 
 		User creator = service.findByUsername(principal.getName());
 		ServiceOrder servic = serviceServiceOrder.read(serviceId);
-		entity.setCreator(creator);
 		entity.setService(servic);
-		entity.setWorker(null);
-		entity.setStatus(serviceStatus.repository.findByName("Предзаказ"));
+		if (id == null) {
+			entity.setCreator(creator);
+			entity.setWorker(null);
+			entity.setStatus(serviceStatus.repository.findByName("Предзаказ"));
 
-		serviceOrder.create(entity);
-		Order order = serviceOrder.repository.findByCreatorAndServiceAndDateCreatedAndDateEnded(creator, servic,
-				entity.getDateCreated(), entity.getDateEnded());
-		creator.getMyOrders().add(order);
-		service.update(creator);
+			serviceOrder.create(entity);
+			Order order = serviceOrder.repository.findByCreatorAndServiceAndDateCreatedAndDateEnded(creator, servic,
+					entity.getDateCreated(), entity.getDateEnded());
+			creator.getMyOrders().add(order);
+			service.update(creator);
+		} else {
+			Order read = serviceOrder.read(id);
+			read.setDateCreated(entity.getDateCreated());
+			read.setDateEnded(entity.getDateEnded());
+			read.setService(entity.getService());
+			serviceOrder.update(read);
+		}
 
 		return "redirect:/users/myOrder";
 	}
@@ -109,6 +131,7 @@ public class UserController {
 			if (myOrders.get(i).getStatus().getId() == 5)
 				myOrders.remove(i);
 		model.addAttribute("list", myOrders);
+		model.addAttribute("myOrder", true);
 		return "orderToUser";
 	}
 
@@ -120,6 +143,7 @@ public class UserController {
 			if (myOrders.get(i).getStatus().getId() != 5)
 				myOrders.remove(i);
 		model.addAttribute("list", myOrders);
+		model.addAttribute("myArhive", true);
 		return "orderToUser";
 	}
 }

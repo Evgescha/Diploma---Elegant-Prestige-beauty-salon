@@ -15,7 +15,7 @@
         <div class="row">
         <div class="col-12 col-md-12 col-lg-8 mx-auto">
 			 <h2 class="text-center">Заказ</h2>
-             <form th:action="@{/users/createOrderNow}" method="post" class="register">
+             <form th:action="@{/users/createOrderNow}" th:object="${order}" method="post" class="register">
                 <table>
                     <tbody>
                                                
@@ -23,29 +23,33 @@
                             <th><label class="mx-2">Услуга</label></th>
                             <td>
                             	<select name="serviceId" id="serviceId" required>
-                            		<option  name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
-										
-										></option>									
+                            		<option th:if="${order.service==null}" name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${order.service==cat}"
+										></option>
+									<option th:if="${order.service!=null}" name="serviceId" th:each="cat : ${services}" th:value="${cat.id}" th:text="${cat}"
+										th:selected="${order.service.id==cat.id}"
+										></option>
 								</select>
                             </td>
                         </tr>
                         
                         <tr>
                             <th><label class="mx-2">Дата создания</label></th>
-                            <td><input type="date" name="dateCreated" class="form-control" required/>
+                            <td><input type="date" th:field="*{dateCreated}" class="form-control" required/>
                             </td>
                         </tr>
                         
                         <tr>
                             <th><label class="mx-2">Дата выполнения</label></th>
-                            <td><input type="date" name="dateEnded" class="form-control" required/>
+                            <td><input type="date" th:field="*{dateEnded}" class="form-control" required/>
                             </td>
-                        </tr>
-                        
+                        </tr>                        
                       
                     </tbody>
                 </table>
                 <p class="my-5 justify-content-between d-flex">
+                
+                	<input type="hidden" id="id" name="id" th:value="${order.id}">
                 	<input type="button" class="btn btn-primary" value = " Назад " onclick="history.back()"/> 
                 	<input type="submit" class="btn btn-primary" value=" Отправить ">
             	</p>
