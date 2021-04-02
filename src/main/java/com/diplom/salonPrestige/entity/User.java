@@ -2,7 +2,6 @@ package com.diplom.salonPrestige.entity;
 
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -17,6 +16,8 @@ import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
@@ -53,9 +54,12 @@ public class User extends AbstractEntity {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "worker")
 	private List<Order> myWorks = new ArrayList<Order>();
 
+	@LazyCollection(LazyCollectionOption.FALSE)
 	@JsonIgnore
 	@Fetch(value = FetchMode.SELECT)
-	@ManyToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.LAZY)
+	@ManyToMany(cascade = { CascadeType.PERSIST }
+	//, fetch = FetchType.LAZY
+			)
 	@JoinTable(name = "user_category", 
 				joinColumns = @JoinColumn(name = "user_id"), 
 				inverseJoinColumns = @JoinColumn(name = "category_id"), 
@@ -88,7 +92,7 @@ public class User extends AbstractEntity {
 	}
 
 	public List<String> getRoleListNames() {
-		List<String> roleNames = new ArrayList<>();
+		List<String> roleNames = new ArrayList<String>();
 		for (Role currRole : getRoles()) {
 			roleNames.add(currRole.getName());
 		}
