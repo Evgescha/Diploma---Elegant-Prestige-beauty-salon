@@ -11,4 +11,3 @@ INSERT INTO status(id, name) VALUES(5,'DONE') ON CONFLICT DO NOTHING;
 
 INSERT INTO my_users(id, username, password) VALUES (1,'admin','$2a$10$7kQ1nv74qr7CiGAouEzxUOqoD9Pylh7nKY6WXDzAV6O1IF5R21tz.') ON CONFLICT DO NOTHING;
 INSERT INTO user_role(user_id, role_id) VALUE (1,2) ON CONFLICT DO NOTHING;
-UPDATE user_role SET role_id=2 WHERE user_id=1; 
